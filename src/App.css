@@ -3,59 +3,44 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Layout Container */
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-/* Container and layout */
-.expense-tracker {
-  background-color: black;
+/* Left Panel - Form */
+.left-panel {
+  flex: 1;
+  max-width: 45%;
+  background-color: #1e1e1e;
+  padding: 1.5rem;
   border-radius: 1rem;
-  padding: 2rem;
-  max-width: 600px;
-  margin: 2rem auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
-/* Expense form */
+/* Right Panel - Expense List */
+.right-panel {
+  flex: 1;
+  max-width: 50%;
+  background-color: #2b2b2b;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+/* Expense Form Layout */
 .expense-form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .expense-form input {
@@ -89,16 +74,14 @@
 
 .expense-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333; /* This is the container background for the name and price */
+  flex-direction: column;
+  background-color: #333;
   padding: 1rem;
   margin: 0.5rem 0;
   border-radius: 12px;
-  color: white; /* Makes the text light and visible */
+  color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
-
 
 /* Delete icon */
 .delete-icon {
@@ -112,8 +95,46 @@
   transform: scale(1.2);
 }
 
+.expense-header,
+.expense-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Equal widths for all columns */
+  padding: 0.75rem 1rem;
+  background-color: #333;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.expense-header {
+  background-color: #444;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.expense-header span,
+.expense-row span {
+  text-align: left;
+  padding: 0 0.5rem;
+  line-height: 1.5;
+}
+
+/* Optional: Styling for search bar */
 .search-bar {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   padding: 0.5rem;
-  width: 95%;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.expense-form input[type="date"] {
+  background-color: #111;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }

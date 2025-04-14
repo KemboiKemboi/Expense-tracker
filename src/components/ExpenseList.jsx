@@ -1,28 +1,21 @@
-import React, { useState } from "react";
-import ExpenseItem from "./ExpenseItem";
+import React from "react";
 import "../App.css";
 
-function ExpenseList({ expenses, onDelete }) {
-  const [filterText, setFilterText] = useState("");
-
-  const filteredExpenses = expenses.filter((expense) =>
-    expense.name.toLowerCase().includes(filterText.toLowerCase())
-  );
-
+function ExpenseList({ expenses }) {
   return (
-    <div className="expense-list-container">
-      <input
-        type="text"
-        placeholder="Search expenses"
-        className="search-bar"
-        value={filterText}
-        onChange={(e) => setFilterText(e.target.value)}
-      />
-      <ul className="expense-list">
-        {filteredExpenses.map((expense) => (
-          <ExpenseItem key={expense.id} expense={expense} onDelete={onDelete} />
-        ))}
-      </ul>
+    <div className="expense-list">
+      <h2>Recorded Expenses</h2>
+      {expenses.length === 0 ? (
+        <p>No expenses recorded yet.</p>
+      ) : (
+        expenses.map((expense) => (
+          <div key={expense.id} className="expense-item">
+            <p><strong>Description:</strong> {expense.description}</p>
+            <p><strong>Category:</strong> {expense.category}</p>
+            <p><strong>Date:</strong> {expense.date}</p>
+          </div>
+        ))
+      )}
     </div>
   );
 }
