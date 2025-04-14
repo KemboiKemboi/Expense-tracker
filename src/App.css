@@ -111,3 +111,9 @@
 .delete-icon:hover {
   transform: scale(1.2);
 }
+
+.search-bar {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 95%;
+}
