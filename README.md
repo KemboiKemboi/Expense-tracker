@@ -42,7 +42,7 @@ cd expense-tracker
 Install dependencies: npm install
 Start development server: npm run dev
 
-You can check the project on: 
+
 
 
 
