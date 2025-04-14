@@ -38,5 +38,8 @@ cd expense-tracker
 Install dependencies: npm install
 Start development server: npm run dev
 
+You can check the project on: 
+<a href = "https://expense-tracker-kzxgtxxsf-dominic-kipkorirs-projects.vercel.app/" target ="_blank"> dominic.tech</a>
+
 
 
