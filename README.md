@@ -1,3 +1,7 @@
+## 🚀 Live Demo
+
+Check out the live version of the Expense Tracker app [here](https://expense-tracker-kzxgtxxsf-dominic-kipkorirs-projects.vercel.app/).
+
 # 💸 Expense Tracker (React)
 
 This is a simple Expense Tracker application built with React. It allows users to add and delete expenses while displaying the name and amount of each expense.
@@ -39,7 +43,7 @@ Install dependencies: npm install
 Start development server: npm run dev
 
 You can check the project on: 
-<a href = "https://expense-tracker-kzxgtxxsf-dominic-kipkorirs-projects.vercel.app/" target ="_blank"> dominic.tech</a>
+
 
 
 
